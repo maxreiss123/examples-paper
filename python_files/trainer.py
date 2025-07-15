@@ -6,7 +6,8 @@ import pickle as pkl
 
 
 os.environ["TF_GPU_ALLOCATOR"] = "cuda_malloc_async"
-
+n_featues = 5 # number of flow feautres we want to consider 
+n_points =  100 # number of points we can utilize for sampling 
 
 #Hint utilize gep-mem from gep-llm
 #Dummy class symbol
@@ -200,7 +201,8 @@ print(f"Seclection len: {len(selection)}")
 #For simple transfer learning we can just initilize embedding with ones ore zeros otherwise we use the flowfield data
 #embed_inds = [np.ones((30, 1))]*len(forms)
 flow_features = pd.read_csv("flow_field_data/flow_features_duct_180.csv")
-n_points = 100 # e.g sample n points
+
+
 embed_inds = []
 for _ in enumerate(forms):
     embed_inds.append(
