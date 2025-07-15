@@ -8,3 +8,4 @@ Evolutionary symbolic regression methods, such as Genetic Programming (GP) or Ge
 ## Folders:
 - python_files: Contains the trainer
 - expression data: contains the linearized pheno equations
+- flow_field_data: contains the features
