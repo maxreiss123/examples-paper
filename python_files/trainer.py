@@ -4,6 +4,9 @@ from tqdm import *
 import os
 import pickle as pkl
 
+from genememory.memconfig import *
+import genememory as geme
+
 
 os.environ["TF_GPU_ALLOCATOR"] = "cuda_malloc_async"
 n_featues = 5 # number of flow feautres we want to consider 
