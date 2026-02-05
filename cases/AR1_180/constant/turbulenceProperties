@@ -1,0 +1,36 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      turbulenceProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+simulationType RAS;
+
+RAS
+{
+    RASModel        kOmegaSSTduct;
+    turbulence      on;
+    printCoeffs     on;
+
+    kOmegaSSTductCoeffs{
+	      zeta1            #include "zeta1.H";
+	      zeta2            #include "zeta2.H";
+	      zeta3            #include "zeta3.H";
+	      zeta4            #include "zeta4.H";
+	      zeta5            #include "zeta5.H";
+	      zeta6            #include "zeta6.H";
+	};
+}
+
+// ************************************************************************* //
